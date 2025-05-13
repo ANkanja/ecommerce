@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+  <main class="main">
+
+
+<!-- Hero Section with Single Background Image -->
+<section id="hero" class="hero-section dark-background">
+  <div class="hero-container" style="
+    background-image: url('../../media/uploads/product/media/uploads/footwear-1838767_1280.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  ">
+    <div class="content" style="
+      text-align: center;
+      color: white;
+      padding: 20px;
+      max-width: 800px;
+      z-index: 2;
+    ">
+      <h2>Welcome to Styles by Essy, where fashion meets affordability.</h2>
+      <h5>"Unveil the Latest Trends and Explore Our Exclusive New Arrivals!"</h5>
+    </div>
+    <!-- Optional dark overlay to improve text readability -->
+    <div style="
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    "></div>
+  </div>
+</section><!-- /Hero Section -->
+
+
+    <section>  
+
+      <div class="container">
+      <div class="row">
+        <h1>LATEST DROPS</h1>
+    
+        <div class="col-md-3"> 
+          <div class="card">
+            <img src="../../media/uploads/product/shoe-2310400_1280_NAsIE0O.jpg" class="card-img-top" alt="Luxury Collection">
+            <div class="card-body">
+              <h5 class="card-title">Luxury Collection</h5>
+              <a href="{% url 'shop' %}" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../../media/uploads/product/shoes-5351339_1280.jpg" class="card-img-top" alt="Streetwear Collection">
+            <div class="card-body">
+              <h5 class="card-title">Streetwear Collection</h5>
+              <a href="{% url 'shop' %}" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../../media/uploads/product/feet-1840619_1280_1.jpg" class="card-img-top" alt="Casual Collection">
+            <div class="card-body">
+              <h5 class="card-title">Casual Collection</h5>
+              <a href="{% url 'shop' %}" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>  
+        <div class="col-md-3">
+          <div class="card">
+            <img src="../../media/uploads/product/shoe-2313143_1280.jpg" class="card-img-top" alt="Affordable Collection">
+            <div class="card-body">
+              <h5 class="card-title">Affordable Collection</h5>
+              <a href="{% url 'shop' %}" class="btn btn-outline-primary">Shop Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    
+
+
+{% endblock %}  

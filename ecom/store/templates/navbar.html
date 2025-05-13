@@ -1,0 +1,36 @@
+  <!-- navbar section -->
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container position-relative d-flex align-items-center justify-content-between">
+
+      <a class="navbar-brand" href="#!"><h3>Styles by essy</h3></a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a class="active" href="{% url 'index' %}">Home</a></li>
+          <li class="dropdown"><a href="#"><span>Categories</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="{% url 'shop' %}">All Products</a></li>
+              <li><a href="{% url 'official' %}">Official wear</a></li>
+              <li><a href="{% url 'sports' %}">Sports wear</a></li>
+            </ul>
+          </li>
+
+
+      {% if user.is_authenticated %}
+          <li><a class="active" href="{% url 'logout' %}">Logout</a></li>   
+      {% else %}
+          <li><a class="active" href="{% url 'login' %}">Login</a></li>
+          
+          <li><a class="active" href="{% url 'register' %}">Register</a></li>
+      {% endif %}
+          
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+  
+
+    </div>
+  </header>
+
+   
